@@ -93,4 +93,6 @@ vim.g.rustaceanvim = {
   },
 }
 
+vim.diagnostic.config({ virtual_text = true })
+
 require("mappings")

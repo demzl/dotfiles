@@ -1,8 +1,4 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
-# Read `man 5 sway` for a complete reference.
+include catppuccin-mocha
 
 ### Variables
 #
@@ -21,11 +17,12 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu rofi -show drun | xargs swaymsg exec --
 
-default_border none
+default_border pixel 2
 default_floating_border none
 font pango:monospace 0.001
 titlebar_padding 1
 titlebar_border_thickness 0
+smart_borders on
 
 ### Appearance
 # window corner radius in px
@@ -53,8 +50,9 @@ blur enable
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg ~/Wallpapers/contents/images_dark/5120x2880.png fit
-output * bg ~/Wallpapers/rustv5.5x2.jpg fit
+# output * bg ~/Wallpapers/swayfx_mascot_3840x2160.png fill
+# output * bg ~/Wallpapers/rustv5.5x2.jpg fit
+output * bg ~/Wallpapers/swayfx_mascot_3840x2160.png fill
 
 # output LVDS-1 scale 1.01
 #
@@ -178,7 +176,7 @@ output * bg ~/Wallpapers/rustv5.5x2.jpg fit
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    # bindsym $mod+s layout stacking
     bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
@@ -231,6 +229,16 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+t exec "killall -SIGUSR1 waybar"
 bindsym $mod+t exec "killall -SIGUSR2 waybar"
+bindsym $mod+s exec "zsh -c 'grim ~/Pictures/Screenshots/$(date +%d-%m-%Y-%s).png'"
+
+
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 # input "type:keyboard" {
 #     xkb_options caps:escape
@@ -248,16 +256,18 @@ bar {
 }
 
 layer_effects "waybar" {
-    # blur enable;
+    blur enable;
     # blur_xray enable;
     # blur_ignore_transparent enable;
     # shadows enable;
     corner_radius 10;
 }
 
+exec mako
+exec autotiling-rs
 
 exec ra-multiplex server
 workspace 1
 exec $term
 workspace 2
-exec firefox
+exec brave

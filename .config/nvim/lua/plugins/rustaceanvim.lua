@@ -1,7 +1,7 @@
 return {
   "mrcjkb/rustaceanvim",
-  version = "^5",
-  ft = "rust",
+  version = "^6",
+  lazy = false,
   keys = {
     {
       "<leader>rfc",

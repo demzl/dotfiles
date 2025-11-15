@@ -9,21 +9,23 @@
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
-        "wlr/taskbar"
-    ],
-    "modules-center": [
         "clock"
     ],
+    "modules-center": [
+        "sway/window"
+    ],
     "modules-right": [
+        "wlr/taskbar",
         "network"
     ],
     "wlr/taskbar": {
-        "on-click": "minimize-raise",
-        "format": "{icon} {name}",
-        "rewrite": {
-            " Firefox Web Browser": " Firefox",
-            " Foot Client": " Foot",
-        }
+        "on-click": "activate",
+        "format": "{icon}",
+        "on-click-right": "close"
+        // "rewrite": {
+        //     " Firefox Web Browser": " Firefox",
+        //     " Foot Client": " Foot",
+        // }
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -35,7 +37,12 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "clock": {
-        "format": "{:%a %I:%M:%S}",
-        "interval": 1
+        "format": "{:%a %I:%M:%S %p}",
+        "interval": 1,
+        "format-alt": "{:%b %d %Y}"
+    },
+    "sway/window": {
+        "format": " {} ",
+        // "max-length": 100
     }
 }

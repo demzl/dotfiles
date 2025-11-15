@@ -31,10 +31,10 @@ return {
         },
       },
       dim_inactive = {
-        enabled = true,
+        enabled = false,
         percentage = 0.45,
       },
-      transparent_background = false,
+      -- transparent_background = true,
     })
     vim.cmd([[colorscheme catppuccin-mocha]])
   end,

@@ -36,8 +36,8 @@ return {
             "filename",
             file_status = true,
             newfile_status = false,
-            path = 0,
-            shorting_target = 40,
+            path = 4,
+            shorting_target = 50,
             symbols = {
               modified = "[+]",
               readonly = "[RO]",
@@ -45,7 +45,10 @@ return {
               newfile = "[New]",
             },
           },
-          { "diagnostics", symbols = { error = "E", warn = "W", info = "I", hint = "H" } },
+          {
+            "diagnostics",
+            symbols = { error = "E", warn = "W", info = "I", hint = "H" },
+          },
           "branch",
           function()
             local reg = vim.fn.reg_recording()
