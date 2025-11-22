@@ -9,8 +9,8 @@ TERM = "xterm-256color"
 size = 11.9
 
 [font.normal]
-# family = "JetBrainsMono NF"
-family = "Maple Mono NF"
+family = "JetBrainsMono NF"
+# family = "Maple Mono NF"
 # family = "CaskaydiaCove NF"
 style = "SemiBold"
 

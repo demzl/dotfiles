@@ -1,4 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  event = "BufReadPost",
+  config = function()
+    vim.lsp.enable("lua_ls")
+  end,
 }

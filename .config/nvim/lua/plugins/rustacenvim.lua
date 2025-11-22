@@ -19,9 +19,5 @@ return {
       "<leader>roc",
       "<cmd>RustLsp openCargo<cr>",
     },
-    {
-      "<leader>rd",
-      "<cmd>RustLsp debuggables<cr>",
-    },
   },
 }

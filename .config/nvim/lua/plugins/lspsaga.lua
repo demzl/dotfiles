@@ -15,10 +15,6 @@ return {
   },
   keys = {
     {
-      "<leader>rn",
-      "<cmd> Lspsaga rename<CR>",
-    },
-    {
       "<A-h>",
       "<cmd> Lspsaga diagnostic_jump_prev<CR>",
     },

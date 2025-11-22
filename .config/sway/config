@@ -256,7 +256,6 @@ bar {
 }
 
 layer_effects "waybar" {
-    blur enable;
     # blur_xray enable;
     # blur_ignore_transparent enable;
     # shadows enable;
