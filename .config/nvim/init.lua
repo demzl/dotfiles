@@ -1,6 +1,7 @@
 require("config.lazy")
 require("options")
 require("mappings")
+vim.cmd.colorscheme("catppuccin-mocha")
 vim.diagnostic.config({ virtual_text = true })
 
 vim.g.rustaceanvim = {
