@@ -1,0 +1,5 @@
+#!/usr/bin/zsh
+FILENAME=$(date +%d-%m-%Y-%s).png
+FILEPATH=~/Pictures/Screenshots/$FILENAME
+grim $FILEPATH
+notify-send "Screenshot saved" "Screenshot saved in $FILENAME"

@@ -231,6 +231,7 @@ bindsym $mod+Shift+t exec "killall -SIGUSR1 waybar"
 bindsym $mod+t exec "killall -SIGUSR2 waybar"
 bindsym $mod+s exec "zsh -c 'grim ~/Pictures/Screenshots/$(date +%d-%m-%Y-%s).png'"
 
+bindsym $mod+c exec "rofi -display-columns 2 -modi clipboard:~/cliphist-rofi-img -show clipboard -show-icons"
 
 # target                 title     bg    text   indicator  border
 client.focused           $lavender $base $text  $rosewater $lavender
@@ -262,8 +263,9 @@ layer_effects "waybar" {
     corner_radius 10;
 }
 
-exec mako
+exec dunst
 exec autotiling-rs
+exec "wl-paste --watch cliphist store"
 
 exec ra-multiplex server
 workspace 1
