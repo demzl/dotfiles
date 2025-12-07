@@ -24,7 +24,7 @@ set $surface0 #313244
 set $base #1e1e2e
 set $mantle #181825
 set $crust #11111b
-output * bg ~/Wallpapers/swayfx_mascot_3840x2160.png fill
+output * bg ~/Wallpapers/cat/cat-bg-black2-fg-red.png fill
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
