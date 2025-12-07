@@ -64,6 +64,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Variables: 
 NVIM_CFG="$HOME/.config/nvim"
-if [ -f ~/dotfiles/.env_private/gemini_key.env ]; then
-    source ~/dotfiles/.env_private/gemini_key.env
+if [ -f ~/.env_private/gemini_key.env ]; then
+    source ~/.env_private/gemini_key.env
 fi
