@@ -67,8 +67,3 @@ NVIM_CFG="$HOME/.config/nvim"
 if [ -f ~/.env_private/gemini_key.env ]; then
     source ~/.env_private/gemini_key.env
 fi
-
-if [ -z "$SSH_AUTH_SOCK" ]; then
-  eval "$(ssh-agent -s)"
-  ssh-add ~/.ssh/id_ed25519 2>/dev/null
-fi

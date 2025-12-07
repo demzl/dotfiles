@@ -24,6 +24,7 @@ set $surface0 #313244
 set $base #1e1e2e
 set $mantle #181825
 set $crust #11111b
+output * bg ~/Wallpapers/swayfx_mascot_3840x2160.png fill
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -74,9 +75,7 @@ blur enable
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg ~/Wallpapers/swayfx_mascot_3840x2160.png fill
-# output * bg ~/Wallpapers/rustv5.5x2.jpg fit
-output * bg ~/Wallpapers/swayfx_mascot_3840x2160.png fill
+
 
 # output LVDS-1 scale 1.01
 #
